@@ -1,0 +1,109 @@
+# Select all records from the table:
+
+# sql Copy code
+
+SELECT * FROM DevOps_Engineers_Information;
+
+# Select records where the DevOps_Status is "Active":
+
+# sql Copy code
+
+SELECT * FROM DevOps_Engineers_Information WHERE DevOps_Status = 'Active';
+
+# Select records where the DevOps_Years_Experience is greater than or equal to 5:
+
+# sql Copy code
+
+SELECT * FROM DevOps_Engineers_Information WHERE DevOps_Years_Experience >= 5;
+
+# Select records where the DevOps_Salary is between 60000 and 80000:
+
+SELECT * FROM DevOps_Engineers_Information WHERE DevOps_Salary BETWEEN 60000 AND 80000;
+
+# Sort the records by DevOps_Years_Experience in descending order:
+
+SELECT * FROM DevOps_Engineers_Information ORDER BY DevOps_Years_Experience DESC;
+
+# Sort the records by DevOps_Salary in ascending order:
+
+SELECT * FROM DevOps_Engineers_Information ORDER BY DevOps_Salary ASC;
+
+# Update the DevOps_Salary to 55000 for the record with DevOps_ID = 5:
+
+UPDATE DevOps_Engineers_Information SET DevOps_Salary = 55000 WHERE DevOps_ID = 5;
+
+# Update the DevOps_Status to "Inactive" for all records where DevOps_Years_Experience is less than 2:
+
+UPDATE DevOps_Engineers_Information SET DevOps_Status = 'Inactive' WHERE DevOps_Years_Experience < 2;
+
+# Query all records sorted by hire date:
+
+SELECT * FROM DevOps_Engineers_Information ORDER BY DevOps_Hire_Date;
+
+# Query all records where the engineer is classified as a senior:
+
+SELECT * FROM DevOps_Engineers_Information WHERE DevOps_Classification = 'Senior DevOps Engineer';
+
+# Query all records where the engineer has more than 3 years of experience:
+
+SELECT * FROM DevOps_Engineers_Information WHERE DevOps_Years_Experience > 3;
+
+# Query the average salary for all engineers:
+
+SELECT AVG(DevOps_Salary) FROM DevOps_Engineers_Information;
+
+# Query the maximum salary for all engineers:
+
+SELECT MAX(DevOps_Salary) FROM DevOps_Engineers_Information;
+
+# Query the minimum salary for all engineers:
+
+SELECT MIN(DevOps_Salary) FROM DevOps_Engineers_Information;
+
+# Query the number of engineers classified as junior:
+
+SELECT COUNT(*) FROM DevOps_Engineers_Information WHERE DevOps_Classification = 'Junior DevOps Engineer';
+
+# Update the classification of engineer with DevOps_ID = 3 to 'Lead DevOps Engineer':
+
+UPDATE DevOps_Engineers_Information SET DevOps_Classification = 'Lead DevOps Engineer' WHERE DevOps_ID = 3;
+
+# Increase the salary of all engineers with more than 2 years of experience by 10%:
+
+UPDATE DevOps_Engineers_Information SET DevOps_Salary = DevOps_Salary * 1.1 WHERE DevOps_Years_Experience > 2;
+
+# Update the salary of DevOps Engineer with ID 1 to 55000.00:
+
+UPDATE DevOps_Engineers_Information SET DevOps_Salary = 55000.00 WHERE DevOps_ID = 1;
+
+# Update the classification of DevOps Engineer with ID 2 to 'Senior DevOps Engineer':
+
+UPDATE DevOps_Engineers_Information SET DevOps_Classification = 'Senior DevOps Engineer' WHERE DevOps_ID = 2;
+
+# Update the years of experience of DevOps Engineer with ID 3 to 6:
+
+UPDATE DevOps_Engineers_Information SET DevOps_Years_Experience = 6 WHERE DevOps_ID = 3;
+
+# Update the status of DevOps Engineer with ID 4 to 'Inactive':
+
+UPDATE DevOps_Engineers_Information SET DevOps_Status = 'Inactive' WHERE DevOps_ID = 4;
+
+# Update the hire date of DevOps Engineer with ID 5 to '2016-09-01':
+
+UPDATE DevOps_Engineers_Information SET DevOps_Hire_Date = '2016-09-01' WHERE DevOps_ID = 5;
+
+# Update the salary of all Junior DevOps Engineers to 55000.00:
+
+UPDATE DevOps_Engineers_Information SET DevOps_Salary = 55000.00 WHERE DevOps_Classification = 'Junior DevOps Engineer';
+
+
+# Update the salary of all Senior DevOps Engineers with more than 5 years of experience to 120000.00:
+
+UPDATE DevOps_Engineers_Information SET DevOps_Salary = 120000.00 WHERE DevOps_Classification = 'Senior DevOps Engineer' AND DevOps_Years_Experience > 5;
+
+# Increase the salary of all DevOps Engineers by 5%:
+
+UPDATE DevOps_Engineers_Information SET DevOps_Salary = DevOps_Salary * 1.05;
+
+
+

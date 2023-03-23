@@ -1,0 +1,55 @@
+# Go to the ubuntu terminal where MYSQL is installed and create a folder called DevOps
+
+# Command to use
+
+mkdir DevOps
+
+# Change directory and enter into DevOps folder
+
+cd DevOps
+
+# While inside the DevOps directory, create the follwoing two sql scripts files 
+
+# Commands to use 
+
+touch devops-database.sql
+touch devops-populate.sql
+
+# Add executable permission to both files 
+# Command to use 
+
+chmod +x devops-populate.sql  devops-database.sql 
+
+# Add the content in both file 
+
+vi devops-database.sql      # Add content from devops-database-table.sql and save
+vi devops-populate.sql      # Add content from populate-devops-table.sql and save
+
+# Get the path to the both files by running the pwd command 
+
+pwd 
+
+# Expected output - Note I am using digitalocean ubuntu serve as the root 
+
+/root/DevOps/devops-database.sql
+/root/DevOps/devops-populate.sql
+
+# Switch to MYSQL terminal by running the command below
+
+mysql 
+
+# While inside mysql terminal run the follwoing commands on the source database 
+
+# You must do them in the order stated below 
+
+# First command 
+
+source /root/DevOps/devops-database.sql
+
+# Second command 
+
+source /root/DevOps/devops-populate.sql
+
+# Go and view the results 
+
+/root/DevOps/database-table-car.sql  devops-database.sql  devops-populate.sql  /root/DevOps/populate-cars.sql
